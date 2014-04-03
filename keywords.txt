@@ -1,0 +1,21 @@
+#######################################
+# Syntax Coloring Map Ultrasonick
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Ultrasonick	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+Timing	KEYWORD2
+Ranging	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+CM	LITERAL1	Constants
+INC	LITERAL1	Constants
