@@ -12,25 +12,33 @@
 
 #include "Ultrasonick.h"
 
-Ultrasonick::Ultrasonick(int TP, int EP) {
-   pinMode(TP,OUTPUT);
-   pinMode(EP,INPUT);
-   Trig_pin=TP;
-   Echo_pin=EP;
+Ultrasonick::Ultrasonick(int trigPin, int echoPin) {
+   pinMode(trigPin, OUTPUT);
+   pinMode(echoPin, INPUT);
+   _trigPin=trigPin;
+   _echoPin=echoPin;
 }
 
-long Ultrasonick::Timing() {
-  digitalWrite(Trig_pin, LOW);
+int Ultrasonick::timing() {
+  digitalWrite(_trigPin, LOW);
   delayMicroseconds(2);
-  digitalWrite(Trig_pin, HIGH);
+  digitalWrite(_trigPin, HIGH);
   delayMicroseconds(10);
-  digitalWrite(Trig_pin, LOW);
-  return pulseIn(Echo_pin,HIGH); // duration
+  digitalWrite(_trigPin, LOW);
+  return pulseIn(_echoPin, HIGH); // duration
 }
 
-long Ultrasonick::Ranging(int und) {
+int Ultrasonick::distanceRead(int und) {
   if (und)
-    return Timing() /29 / 2 ; //CM
+    return timing() / 29 / 2 ; //distance in CM
   else
-    return Timing() / 74 / 2; //INC
+    return timing() / 74 / 2; //distance in INC
+}
+
+int Ultrasonick::distanceRead() {
+  /*
+  If the unit of measure is not passed as a parameter,
+  by default, it will return the distance in centimeters
+  */
+  distanceRead(CM);
 }
