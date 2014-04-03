@@ -19,13 +19,14 @@
 
 class Ultrasonick {
   public:
-    Ultrasonick(int TP, int EP);
-    long Timing();
-    long Ranging(int und);
+    Ultrasonick(int trigPin, int echoPin);
+    int distanceRead(int und);
+    int distanceRead();
 
   private:
-    int Trig_pin;
-    int Echo_pin;
+    int _trigPin;
+    int _echoPin;
+    int timing();
 };
 
 #endif // Ultrasonic_h
