@@ -24,7 +24,7 @@ void setup() {
 }
 
 void loop() {
-  Serial.print("Distance in CM:");
+  Serial.print("Distance in CM: ");
   Serial.println(ultrasonick.distanceRead()); // By default the distance is returned in centimeters
   delay(1000);
 }

@@ -13,10 +13,10 @@
 #include "Ultrasonick.h"
 
 Ultrasonick::Ultrasonick(int trigPin, int echoPin) {
-   pinMode(trigPin, OUTPUT);
-   pinMode(echoPin, INPUT);
-   _trigPin=trigPin;
-   _echoPin=echoPin;
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  _trigPin = trigPin;
+  _echoPin = echoPin;
 }
 
 int Ultrasonick::timing() {
@@ -38,7 +38,8 @@ int Ultrasonick::distanceRead(int und) {
 int Ultrasonick::distanceRead() {
   /*
   If the unit of measure is not passed as a parameter,
-  by default, it will return the distance in centimeters
+  by default, it will return the distance in centimeters.
+  To change the default, replace CM by INC.
   */
   distanceRead(CM);
 }
