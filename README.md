@@ -1,54 +1,53 @@
 Ultrasonick
 ===========
 
-*Biblioteca Arduino minimalista para o módulo ultrassom HC-SR04.*
+*Minimalist library for ultrasound module HC-SR04 to Arduino.*
 
-Trabalhar com o módulo ultrassônico HC-SR04 é bastante simples, mas pode ser ainda mais prático de você abstrair o controle de algumas funcionalidades. Esta biblioteca visa a economia de recursos e a simplicidade no acesso aos dados.
+Work with the ultrasonic module HC-SR04 is fairly simple, but can be even more practical if you abstract the control of some features. This library aims to resource efficiency and to simplify access to data.
 
-Quando necessário usar o módulo ultrassônico HC-SR04 (um dos mais comuns no mercado), há centenas de bibliotecas que se propõem a disponibilizar as mais diversas funções para o usuário, porem, a grande maioria das vezes, necessitamos apenas descobrir a distância e é isso que esta biblioteca faz.
+Where necessary use the ultrasonic module HC-SR04 (one of the most common on the market), there are hundreds of libraries that purport to provide the most diverse roles for the user, however, the vast majority of the time, we just need to find out the distance and is that's what does this library.
 
-Carinhosamente chamada de Ultrasonick, ela é minimalista, reduz a execução de códigos, validações desnecessárias e o uso de variáveis globais. Ainda prioriza tipos de dados menores e é compatível com versões antigas da IDE do Arduino.
+Lovingly called Ultrasonick, it is minimalist, reduces code execution, validation and unnecessary use of global variables. Still prioritizes smaller data types and is compatible with older versions of the Arduino IDE.
 
-
-
-Ultrasonick de EricK Simões de Matos está licenciado com uma Licença Creative Commons – Atribuição-CompartilhaIgual 4.0 Internacional.
-Baseado no trabalho disponível em http://wiki.tetrasys-design.net/HCSR04Ultrasonic.
-Pode ser possível adquirir autorizações adicionais às concedidas no âmbito desta licença entrando em contato com o desenvolvedor através dos links em http://ericksimoes.com.br/sobre/.
-
-Como usar:
+How to use:
 ---------------
-A ideia é fornecer um ambiente mais simples possível. Para isto, basta seguir os requintes passos:
+The idea is to provide a simpler environment possible. To do this, simply follow the steps:
 
-1. **Instalando**
+1. **Installing**
 
-    Primeiro é necessário importar a biblioteca de forma que a IDE a reconheça. Para isso você deve fazer o download neste link. Com o arquivo .zip da biblioteca Ultrasonick, instale a biblioteca desta forma.
-2. **Importando**
+    First need to import the library so that the IDE recognizes it. For that you should download and with the .zip file Ultrasonick library, import it into the IDE.
+2. **Importing**
 
-    Para importar a biblioteca, basta escrever no início do código  #include ou, na IDE Arduino, clique em ```Sketch > Importar biblioteca > Ultrasonick``` (terá o mesmo resultado).
-3. **Inicializando** (a parte mais emocionante)
+    To import the library, just write at the beginning of the code #include or, in the Arduino IDE, click in ```Sketch > Import library > Ultrasonick``` (will have the same result).
+3. **Starting** (the most exciting part)
 
-    Agora é basta criar uma variável do tipo Ultrasonick passando como parâmetros dois números inteiros que representam, respectivamente, os pinos Trig (emissor) e Echo (receptor). Desta forma:
+    Now is simply create a variable of type Ultrasonick passing as parameters two integers representing, respectively, the Trig (emitter) and Echo (receiver) pins. Like this:
     ```
     Ultrasonick ultrasonick(12, 13);
     ```
-4. **Descobrindo a distancia**
+4. **Discovering the distance**
 
-    Tendo inicializado uma variável, é possível executar a partir dela o método que retorna a distância lida pelo módulo Ultrassônico:  ```distanceRead()```
+    Having initialized a variable, you can run hers from the method that returns the distance read by module Ultrasonic: ```distanceRead()```
     ```
     ultrasonick.distanceRead()
     ```
-5. **Só isso?**
+5. **Only this?**
 
-    É. Só isso. Por padrão, o valor retornado da função  ```distanceRead()``` representa a distância em centímetros.
+    Yes. That's it. By default, the value returned from the function  ```distanceRead()``` is the distance in centimeters.
 
-6. **Sério mesmo?**
+6. **Seriously?**
 
-    Você ainda pode fazer mais um pouco, com imprimir na tela a distância lida pelo sensor ou definir a unidade de medida que será retornada (centímetros ou polegadas).
+    You can still do a little more determining the unit of measurement that will be returned (centimeters (CM) or inches (INC)).
+    ```
+    ultrasonick.distanceRead()    // distance in CM
+    ultrasonick.distanceRead(CM)  // distance in CM
+    ultrasonick.distanceRead(INC) // distance in INC
+    ```
 
 
-Licença
+License
 ----
 
-Ultrasonick de EricK Simões de Matos está licenciado com uma Licença Creative Commons – Atribuição-CompartilhaIgual 4.0 Internacional.
-Baseado no trabalho disponível em http://wiki.tetrasys-design.net/HCSR04Ultrasonic.
-Podem estar disponíveis autorizações adicionais às concedidas no âmbito desta licença em http://ericksimoes.com.br/sobre/.
+Ultrasonick by [EricK Simões de Matos](http://ericksimoes.com.br/ "EricK Simões") is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+Based on a work at http://wiki.tetrasys-design.net/HCSR04Ultrasonic.
+Permissions beyond the scope of this license may be available at [http://ericksimoes.com.br/sobre/](http://ericksimoes.com.br/sobre/ "About EricK Simões").
