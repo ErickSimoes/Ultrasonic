@@ -1,5 +1,5 @@
 /*
-  Ultrasonick.h - Library for HR-SC04 Ultrasonic Ranging Module in a minimalist way.
+  Ultrasonick.h - Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way.
   Created by EricK Simoes (@AloErickSimoes), April 3, 2014.
   Released into the Creative Commons Attribution-ShareAlike 4.0 International.
 */
@@ -30,9 +30,9 @@ int Ultrasonick::timing() {
 
 int Ultrasonick::distanceRead(int und) {
   if (und)
-    return timing() / 29 / 2 ; //distance in CM
+    return timing() / 28 / 2 ; //distance in CM
   else
-    return timing() / 74 / 2; //distance in INC
+    return timing() / 71 / 2; //distance in INC
 }
 
 int Ultrasonick::distanceRead() {
