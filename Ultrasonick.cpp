@@ -4,6 +4,9 @@
   Released into the Creative Commons Attribution-ShareAlike 4.0 International.
 */
 
+/**
+* TODO: Consider removing compatibility for the old Arduino API
+*/
 #if (ARDUINO >= 100)
   #include "Arduino.h"
 #else
@@ -28,6 +31,10 @@ int Ultrasonick::timing() {
   return pulseIn(_echoPin, HIGH); // duration
 }
 
+/**
+* TODO: Enable the change of sound velocity constants
+* TODO: Change the variable type to a minnor size
+*/
 int Ultrasonick::distanceRead(int und) {
   if (und)
     return timing() / 28 / 2 ; //distance in CM
