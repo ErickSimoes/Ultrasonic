@@ -2,12 +2,6 @@
 * TODO: Change license to BSD-3-Clause
 */
 
-/**
-* TODO: Update layout of folders and files follows the new
-* specification of libraries.
-* https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5:-Library-specification
-*/
-
 /*
   Ultrasonick.h - Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way.
   Created by EricK Simoes (@AloErickSimoes), April 3, 2014.
