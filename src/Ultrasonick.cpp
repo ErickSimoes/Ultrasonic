@@ -48,5 +48,5 @@ int Ultrasonick::distanceRead() {
   by default, it will return the distance in centimeters.
   To change the default, replace CM by INC.
   */
-  distanceRead(CM);
+  return distanceRead(CM);
 }
