@@ -1,7 +1,3 @@
-/**
-* TODO: Change license to BSD-3-Clause
-*/
-
 /*
   Ultrasonick.h - Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way.
   Created by EricK Simoes (@AloErickSimoes), April 3, 2014.
