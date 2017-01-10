@@ -45,10 +45,9 @@ The idea is to provide a simpler environment possible. To do this, simply follow
     ```
 
 
-
 License
 ----
-Ultrasonick by [EricK Simões de Matos](http://ericksimoes.com.br/ "EricK Simões") is licensed under a MIT License.
+Ultrasonick by [Erick Simões](http://ericksimoes.com.br/ "Erick Simões") is licensed under a MIT License.
 Based on the work of Carl John Nobile available [here](http://wiki.tetrasys-design.net/HCSR04Ultrasonic).
 Feel free to contact the author on Twitter: [@AloErickSimoes](https://twitter.com/AloEricKSimoes)
 
