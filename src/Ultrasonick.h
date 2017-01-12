@@ -17,7 +17,6 @@
 #define INC 0
 
 /**
-* TODO: Consider discontinuing use of classes and using structures
 * TODO: Remove the underscore of the private variables name
 * and use static keyword
 */
