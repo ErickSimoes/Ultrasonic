@@ -15,7 +15,7 @@
 
 #include "Ultrasonick.h"
 
-Ultrasonick::Ultrasonick(int trigPin, int echoPin) {
+Ultrasonick::Ultrasonick(uint8_t trigPin, uint8_t echoPin) {
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
   _trigPin = trigPin;
@@ -33,9 +33,8 @@ int Ultrasonick::timing() {
 
 /**
 * TODO: Enable the change of sound velocity constants
-* TODO: Change the variable type to a minnor size
 */
-int Ultrasonick::distanceRead(int und) {
+int Ultrasonick::distanceRead(uint8_t und) {
   if (und)
     return timing() / 28 / 2 ; //distance in CM
   else
