@@ -22,13 +22,13 @@
 */
 class Ultrasonick {
   public:
-    Ultrasonick(int trigPin, int echoPin);
-    int distanceRead(int und);
+    Ultrasonick(uint8_t trigPin, uint8_t echoPin);
+    int distanceRead(uint8_t und);
     int distanceRead();
 
   private:
-    int _trigPin;
-    int _echoPin;
+    uint8_t _trigPin;
+    uint8_t _echoPin;
     int timing();
 };
 
