@@ -10,10 +10,6 @@
 #define CM 1
 #define INC 0
 
-/**
-* TODO: Remove the underscore of the private variables name
-* and use static keyword
-*/
 class Ultrasonick {
   public:
     Ultrasonick(uint8_t trigPin, uint8_t echoPin);
@@ -21,8 +17,8 @@ class Ultrasonick {
     int distanceRead();
 
   private:
-    uint8_t _trigPin;
-    uint8_t _echoPin;
+    uint8_t trig;
+    uint8_t echo;
     int timing();
 };
 
