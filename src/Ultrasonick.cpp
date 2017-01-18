@@ -4,15 +4,7 @@
   Released into the Creative Commons Attribution-ShareAlike 4.0 International.
 */
 
-/**
-* TODO: Consider removing compatibility for the old Arduino API
-*/
-#if (ARDUINO >= 100)
-  #include "Arduino.h"
-#else
-  #include "WProgram.h"
-#endif
-
+#include <Arduino.h>
 #include "Ultrasonick.h"
 
 Ultrasonick::Ultrasonick(uint8_t trigPin, uint8_t echoPin) {
