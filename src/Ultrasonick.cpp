@@ -14,6 +14,9 @@
 #include <Arduino.h>
 #include "Ultrasonick.h"
 
+#define CM_DIVISOR  28
+#define INC_DIVISOR 71
+
 Ultrasonick::Ultrasonick(uint8_t trigPin, uint8_t echoPin) {
   trig = trigPin;
   echo = echoPin;
@@ -30,21 +33,18 @@ int Ultrasonick::timing() {
   return pulseIn(echo, HIGH); // duration
 }
 
-/**
-* TODO: Enable the change of sound velocity constants
-*/
 int Ultrasonick::distanceRead(uint8_t und) {
   if (und)
-    return timing() / 28 / 2 ; //distance in CM
+    return timing() / CM_DIVISOR / 2;  //distance in CM
   else
-    return timing() / 71 / 2; //distance in INC
+    return timing() / INC_DIVISOR / 2; //distance in INC
 }
 
 int Ultrasonick::distanceRead() {
   /*
-  If the unit of measure is not passed as a parameter,
-  by default, it will return the distance in centimeters.
-  To change the default, replace CM by INC.
-  */
+   * If the unit of measure is not passed as a parameter,
+   * by default, it will return the distance in centimeters.
+   * To change the default, replace CM by INC.
+   */
   return distanceRead(CM);
 }
