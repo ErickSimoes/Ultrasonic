@@ -1,8 +1,15 @@
 /*
-  Ultrasonick.h - Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way.
-  Created by EricK Simoes (@AloErickSimoes), April 3, 2014.
-  Released into the Creative Commons Attribution-ShareAlike 4.0 International.
-*/
+ * Ultrasonick.h
+ * 
+ * Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way
+ *
+ * created 3 Apr 2014
+ * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
+ * modified 23 Jan 2017
+ * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
+ * 
+ * Released into the MIT License.
+ */
 
 #include <Arduino.h>
 #include "Ultrasonick.h"
