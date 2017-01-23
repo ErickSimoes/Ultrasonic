@@ -1,13 +1,15 @@
 #######################################
 # Syntax Coloring Map Ultrasonick
-# by EricK Simoes (@AloErickSimoes)
+# by Erick Simões
+# 	github: @ErickSimoes
+#	twitter: @AloErickSimoes
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
-Ultrasonick	KEYWORD1
+Ultrasonick		KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
