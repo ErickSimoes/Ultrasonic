@@ -1,5 +1,5 @@
 /*
- * Ultrasonick.h
+ * Ultrasonic.h
  * 
  * Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way
  *
@@ -12,19 +12,19 @@
  */
 
 #include <Arduino.h>
-#include "Ultrasonick.h"
+#include "Ultrasonic.h"
 
 #define CM_DIVISOR  28
 #define INC_DIVISOR 71
 
-Ultrasonick::Ultrasonick(uint8_t trigPin, uint8_t echoPin) {
+Ultrasonic::Ultrasonic(uint8_t trigPin, uint8_t echoPin) {
   trig = trigPin;
   echo = echoPin;
   pinMode(trig, OUTPUT);
   pinMode(echo, INPUT);
 }
 
-int Ultrasonick::timing() {
+int Ultrasonic::timing() {
   digitalWrite(trig, LOW);
   delayMicroseconds(2);
   digitalWrite(trig, HIGH);
@@ -33,14 +33,14 @@ int Ultrasonick::timing() {
   return pulseIn(echo, HIGH); // duration
 }
 
-int Ultrasonick::distanceRead(uint8_t und) {
+int Ultrasonic::distanceRead(uint8_t und) {
   if (und)
     return timing() / CM_DIVISOR / 2;  //distance in CM
   else
     return timing() / INC_DIVISOR / 2; //distance in INC
 }
 
-int Ultrasonick::distanceRead() {
+int Ultrasonic::distanceRead() {
   /*
    * If the unit of measure is not passed as a parameter,
    * by default, it will return the distance in centimeters.

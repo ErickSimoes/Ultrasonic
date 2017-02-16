@@ -1,5 +1,5 @@
 /*
- * Ultrasonick.h
+ * Ultrasonic.h
  * 
  * Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way
  *
@@ -11,15 +11,15 @@
  * Released into the MIT License.
  */
 
-#ifndef Ultrasonick_h
-#define Ultrasonick_h
+#ifndef Ultrasonic_h
+#define Ultrasonic_h
 
 #define CM 1
 #define INC 0
 
-class Ultrasonick {
+class Ultrasonic {
   public:
-    Ultrasonick(uint8_t trigPin, uint8_t echoPin);
+    Ultrasonic(uint8_t trigPin, uint8_t echoPin);
     int distanceRead(uint8_t und);
     int distanceRead();
 
