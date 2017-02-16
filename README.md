@@ -27,13 +27,13 @@ The idea is to provide a simpler environment possible. To do this, simply follow
 3. **Starting** (the most exciting part)
 
     Now is simply create a variable of type Ultrasonic passing as parameters two values representing, respectively, the Trig (emitter) and Echo (receiver) pins. Like this:
-    ```
+    ```c++
     Ultrasonic Ultrasonic(12, 13);
     ```
 4. **Discovering the distance**
 
     Having initialized a variable, you can run hers from the method that returns the distance read by module Ultrasonic: ```distanceRead()```
-    ```
+    ```c++
     Ultrasonic.distanceRead()
     ```
 5. **Only this?**
@@ -43,13 +43,13 @@ The idea is to provide a simpler environment possible. To do this, simply follow
 6. **Seriously?**
 
     You can still do a little more determining the unit of measurement that will be returned (centimeters (CM) or inches (INC)).
-    ```
+    ```c++
     Ultrasonic.distanceRead()    // distance in CM
     Ultrasonic.distanceRead(CM)  // distance in CM
     Ultrasonic.distanceRead(INC) // distance in INC
     ```
     You can also use more than one ultrasound module:
-    ```
+    ```c++
     Ultrasonic ultrasound1(12, 13);
     Ultrasonic ultrasound2(10, 11);
     Ultrasonic ultrasound3(4, 5);
