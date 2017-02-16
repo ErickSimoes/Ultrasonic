@@ -1,5 +1,5 @@
 /*
- * Ultrassonick Simple
+ * Ultrasonic Simple
  * Print the distance read for the
  * HR-SC04 Ultrasonic Sensor in centimeters.
  *
@@ -17,7 +17,7 @@
  * 
  * By default, the distance returned by the distanceRead() method is
  * in centimeters, to get the distance in inches, pass INC as a parameter.
- * Example: ultrasonick.distanceRead(INC)
+ * Example: Ultrasonic.distanceRead(INC)
  *
  * created 3 Apr 2014
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
@@ -27,9 +27,9 @@
  * This example code is released into the MIT License.
  */
 
-#include <Ultrasonick.h>
+#include <Ultrasonic.h>
 
-Ultrasonick ultrasonick(12, 13);
+Ultrasonic Ultrasonic(12, 13);
 
 void setup() {
   Serial.begin(9600);
@@ -38,6 +38,6 @@ void setup() {
 void loop() {
   Serial.print("Distance in CM: ");
   // Pass INC as a parameter to get the distance in inches
-  Serial.println(ultrasonick.distanceRead());
+  Serial.println(Ultrasonic.distanceRead());
   delay(1000);
 }
