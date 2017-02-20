@@ -1,5 +1,5 @@
 /*
- * Ultrasonic.h
+ * Ultrasonic.cpp
  * 
  * Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way
  *
