@@ -23,7 +23,7 @@ The idea is to provide a simpler environment possible. To do this, simply follow
     First need to import the library so that the IDE recognizes it. For that you should download (click [here](https://github.com/ErickSimoes/Ultrasonic/archive/v1.0.1.zip)) and with the .zip file Ultrasonic library, import it into the IDE (see how to import a library [here](https://www.arduino.cc/en/Guide/Libraries#toc4)).
 2. **Importing on code**
 
-    To import the library to your code, just write at the beginning of the code ```#include <Ultrasonic.h>``` or, in the Arduino IDE, click in ```Sketch > Import library > Ultrasonic``` (_will have the same result_).
+    To import the library to your code, just write at the beginning of the code ```#include <Ultrasonic.h>``` or, in the Arduino IDE, click in ```Sketch > Include Library > Ultrasonic``` (_will have the same result_).
 3. **Starting** (the most exciting part)
 
     Now is simply create a variable of type Ultrasonic passing as parameters two values representing, respectively, the Trig (emitter) and Echo (receiver) pins. Like this:
