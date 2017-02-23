@@ -20,7 +20,13 @@ The idea is to provide a simpler environment possible. To do this, simply follow
 
 1. **Installing**
 
-    First need to import the library so that the IDE recognizes it. For that you should download (click [here](https://github.com/ErickSimoes/Ultrasonic/archive/v1.0.1.zip)) and with the .zip file Ultrasonic library, import it into the IDE (see how to import a library [here](https://www.arduino.cc/en/Guide/Libraries#toc4)).
+    First you need to import the library so that the IDE recognizes it. The simplest way is importing through the IDE itself:
+    - Click in ```Sketch > Include Library > Manage Libraries...```;
+    - In the search field type: ```ultrasonic```;
+    - In the list, look for ```Ultrasonic by Erick Simões```;
+    - Click on ```Install```.
+    
+    Alternatively, you can download the library [here](https://github.com/ErickSimoes/Ultrasonic/archive/v1.0.1.zip) and import the ```.zip``` file into the IDE (see how to import a library [here](https://www.arduino.cc/en/Guide/Libraries#toc4)).
 2. **Importing on code**
 
     To import the library to your code, just write at the beginning of the code ```#include <Ultrasonic.h>``` or, in the Arduino IDE, click in ```Sketch > Include Library > Ultrasonic``` (_will have the same result_).
