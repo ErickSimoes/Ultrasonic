@@ -4,16 +4,17 @@
  * HR-SC04 Ultrasonic Sensor in centimeters.
  *
  * The circuit:
- * * Module HR-SC04 attached to digital pins as follows:
+ * * Module HR-SC04 (4 pins) or PING))) (and other with 3 pins),
+ *   attached to digital pins as follows:
+ * ---------------------    ---------------------
+ * | HC-SC04 | Arduino |    | 3 pins  | Arduino |
+ * ---------------------    ---------------------
+ * |   Vcc   |   5V    |    |   Vcc   |   5V    |
+ * |   Trig  |   12    | OR |   SIG   |   13    |
+ * |   Echo  |   13    |    |   Gnd   |   GND   |
+ * |   Gnd   |   GND   |    ---------------------
  * ---------------------
- * | HC-SC04 | Arduino |
- * ---------------------
- * |   Vcc   |   5V    |
- * |   Trig  |   12    |
- * |   Echo  |   13    |
- * |   Gnd   |   GND   |
- * ---------------------
- * Note: It is not mandatory to use pins 12 and 13 of the Arduino
+ * Note: You need not obligatorily use the pins 12 and 13
  * 
  * By default, the distance returned by the distanceRead() method is
  * in centimeters, to get the distance in inches, pass INC as a parameter.
@@ -31,6 +32,11 @@
 
 #include <Ultrasonic.h>
 
+/*
+ * Pass as a parameter the trigger and echo pin, respectively,
+ * or only the signal pin (for sensors 3 pins), like:
+ * Ultrasonic ultrasonic(13);
+ */
 Ultrasonic ultrasonic(12, 13);
 
 void setup() {
