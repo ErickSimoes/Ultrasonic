@@ -23,8 +23,8 @@ class Ultrasonic {
   public:
     Ultrasonic(uint8_t sigPin);
     Ultrasonic(uint8_t trigPin, uint8_t echoPin);
-    unsigned int distanceRead(uint8_t und);
     unsigned int distanceRead();
+    unsigned int distanceRead(uint8_t und);
 
   private:
     uint8_t trig;

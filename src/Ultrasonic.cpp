@@ -48,13 +48,6 @@ unsigned int Ultrasonic::timing() {
   return pulseIn(echo, HIGH); // duration
 }
 
-unsigned int Ultrasonic::distanceRead(uint8_t und) {
-  if (und)
-    return timing() / CM_DIVISOR / 2;  //distance in CM
-  else
-    return timing() / INC_DIVISOR / 2; //distance in INC
-}
-
 unsigned int Ultrasonic::distanceRead() {
   /*
    * If the unit of measure is not passed as a parameter,
@@ -62,4 +55,11 @@ unsigned int Ultrasonic::distanceRead() {
    * To change the default, replace CM by INC.
    */
   return distanceRead(CM);
+}
+
+unsigned int Ultrasonic::distanceRead(uint8_t und) {
+  if (und)
+    return timing() / CM_DIVISOR / 2;  //distance in CM
+  else
+    return timing() / INC_DIVISOR / 2; //distance in INC
 }
