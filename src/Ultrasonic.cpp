@@ -1,6 +1,6 @@
 /*
  * Ultrasonic.cpp
- * 
+ *
  * Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way
  *
  * created 3 Apr 2014
@@ -9,7 +9,7 @@
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 01 Mar 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
- * 
+ *
  * Released into the MIT License.
  */
 
@@ -19,6 +19,12 @@
 #define CM_DIVISOR  28
 #define INC_DIVISOR 71
 
+Ultrasonic::Ultrasonic(uint8_t sigPin) {
+  trig = sigPin;
+  echo = sigPin;
+  threePins = true;
+}
+
 Ultrasonic::Ultrasonic(uint8_t trigPin, uint8_t echoPin) {
   trig = trigPin;
   echo = echoPin;
@@ -27,11 +33,18 @@ Ultrasonic::Ultrasonic(uint8_t trigPin, uint8_t echoPin) {
 }
 
 unsigned int Ultrasonic::timing() {
+  if (threePins)
+    pinMode(trig, OUTPUT);
+
   digitalWrite(trig, LOW);
   delayMicroseconds(2);
   digitalWrite(trig, HIGH);
   delayMicroseconds(10);
   digitalWrite(trig, LOW);
+
+  if (threePins)
+    pinMode(trig, INPUT);
+
   return pulseIn(echo, HIGH); // duration
 }
 
