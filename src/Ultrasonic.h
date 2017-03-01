@@ -7,6 +7,8 @@
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 23 Jan 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
+ * modified 01 Mar 2017
+ * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * 
  * Released into the MIT License.
  */
@@ -20,13 +22,13 @@
 class Ultrasonic {
   public:
     Ultrasonic(uint8_t trigPin, uint8_t echoPin);
-    int distanceRead(uint8_t und);
-    int distanceRead();
+    unsigned int distanceRead(uint8_t und);
+    unsigned int distanceRead();
 
   private:
     uint8_t trig;
     uint8_t echo;
-    int timing();
+    unsigned int timing();
 };
 
 #endif // Ultrasonic_h

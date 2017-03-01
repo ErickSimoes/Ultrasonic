@@ -7,6 +7,8 @@
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 23 Jan 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
+ * modified 01 Mar 2017
+ * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * 
  * Released into the MIT License.
  */
@@ -24,7 +26,7 @@ Ultrasonic::Ultrasonic(uint8_t trigPin, uint8_t echoPin) {
   pinMode(echo, INPUT);
 }
 
-int Ultrasonic::timing() {
+unsigned int Ultrasonic::timing() {
   digitalWrite(trig, LOW);
   delayMicroseconds(2);
   digitalWrite(trig, HIGH);
@@ -33,14 +35,14 @@ int Ultrasonic::timing() {
   return pulseIn(echo, HIGH); // duration
 }
 
-int Ultrasonic::distanceRead(uint8_t und) {
+unsigned int Ultrasonic::distanceRead(uint8_t und) {
   if (und)
     return timing() / CM_DIVISOR / 2;  //distance in CM
   else
     return timing() / INC_DIVISOR / 2; //distance in INC
 }
 
-int Ultrasonic::distanceRead() {
+unsigned int Ultrasonic::distanceRead() {
   /*
    * If the unit of measure is not passed as a parameter,
    * by default, it will return the distance in centimeters.
