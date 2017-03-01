@@ -23,13 +23,15 @@
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 23 Jan 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
+ * modified 01 Mar 2017
+ * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  *
  * This example code is released into the MIT License.
  */
 
 #include <Ultrasonic.h>
 
-Ultrasonic Ultrasonic(12, 13);
+Ultrasonic ultrasonic(12, 13);
 
 void setup() {
   Serial.begin(9600);
@@ -38,6 +40,6 @@ void setup() {
 void loop() {
   Serial.print("Distance in CM: ");
   // Pass INC as a parameter to get the distance in inches
-  Serial.println(Ultrasonic.distanceRead());
+  Serial.println(ultrasonic.distanceRead());
   delay(1000);
 }
