@@ -1,13 +1,13 @@
 /*
  * Ultrasonic.cpp
  *
- * Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way
+ * Library for Ultrasonic Ranging Module in a minimalist way
  *
  * created 3 Apr 2014
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 23 Jan 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
- * modified 01 Mar 2017
+ * modified 03 Mar 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  *
  * Released into the MIT License.

@@ -1,7 +1,7 @@
 /*
  * Ultrasonic.h
  *
- * Library for HC-SR04 Ultrasonic Ranging Module in a minimalist way
+ * Library for Ultrasonic Ranging Module in a minimalist way
  *
  * created 3 Apr 2014
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
