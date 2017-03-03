@@ -1,18 +1,24 @@
 Ultrasonic
 ===========
 
-_Minimalist library for ultrasound module **HC-SR04** to Arduino_
+_Minimalist library for ultrasound module to Arduino_
 
-Work with the **ultrasonic module HC-SR04** is fairly simple, but can be even more practical if you abstract the control of some features. This library aims to resource efficiency and to simplify access to data.
+### Compatible with **HC-SR04**, **Ping)))** and **Seeed SEN136B5B** (_from Seeed Studio_)
 
-Where necessary use the ultrasonic module HC-SR04 (one of the most common on the market), there are hundreds of libraries that purport to provide the most diverse roles for the user, however, the vast majority of the time, we just need to find out the distance and is that's what does this library.
+Work with **ultrasonic modules** is fairly simple, but can be even more practical if you abstract the control of some features. This library aims to resource efficiency and to simplify access to data.
+
+Where necessary use the ultrasonic module **HC-SR04** (one of the most common on the market), **Ping)))** and/or **Seeed SEN136B5B** (_from Seeed Studio_), there are hundreds of libraries that purport to provide the most diverse roles for the user, however, the vast majority of the time, we just need to find out the distance and is that's what does this library.
 
 This library is minimalist, reduces code execution, validation and unnecessary use of global variables, prioritizing smaller data types.
 
 Wiring:
 ---------------
-It is very easy to connect the HC-SR04 module to the Arduino. For this example, we will connect the **trigger** and echo pin module on pin **12** and **13** of the Arduino, respectively. As in the picture:
+It is very easy to connect an ultrasound module to the Arduino. For example, if you are using **HC-SR04**, connect the **trigger** and **echo** pin module on pin **12** and **13** of the Arduino, respectively. As in the picture:
 ![HC-SR04 with Arduino](extras/HC-SR04-with-Arduino.jpg?raw=true "HC-SR04 with Arduino")
+
+If you are using a module with three pins (like  **Ping)))** or **Seeed SEN136B5B**), you can conect the **sig** pin module on pin **13** of the Arduino.
+
+#### You can use the [Fritzing](http://fritzing.org/home/)(_.fzz_) files inside [extras](https://github.com/ErickSimoes/Ultrasonic/tree/master/extras) to draw your prototypes.
 
 How to use:
 ---------------
@@ -34,13 +40,17 @@ The idea is to provide a simpler environment possible. To do this, simply follow
 
     Now is simply create a variable of type Ultrasonic passing as parameters two values representing, respectively, the Trig (emitter) and Echo (receiver) pins. Like this:
     ```c++
-    Ultrasonic Ultrasonic(12, 13);
+    Ultrasonic ultrasonic(12, 13);
+    ```
+    If you are using a module with three pins (like  **Ping)))** or **Seeed SEN136B5B**), pass as a parameter only the signal pin. Like this:
+    ```c++
+    Ultrasonic ultrasonic(13);
     ```
 4. **Discovering the distance**
 
     Having initialized a variable, you can run hers from the method that returns the distance read by module Ultrasonic: ```distanceRead()```
     ```c++
-    Ultrasonic.distanceRead()
+    ultrasonic.distanceRead()
     ```
 5. **Only this?**
 
@@ -50,16 +60,18 @@ The idea is to provide a simpler environment possible. To do this, simply follow
 
     You can still do a little more determining the unit of measurement that will be returned (centimeters (CM) or inches (INC)).
     ```c++
-    Ultrasonic.distanceRead()    // distance in CM
-    Ultrasonic.distanceRead(CM)  // distance in CM
-    Ultrasonic.distanceRead(INC) // distance in INC
+    ultrasonic.distanceRead()    // distance in CM
+    ultrasonic.distanceRead(CM)  // distance in CM
+    ultrasonic.distanceRead(INC) // distance in INC
     ```
     You can also use more than one ultrasound module:
     ```c++
-    Ultrasonic ultrasound1(12, 13);
-    Ultrasonic ultrasound2(10, 11);
-    Ultrasonic ultrasound3(4, 5);
+    ultrasonic ultrasound1(12, 13);
+    ultrasonic ultrasound2(10, 11);
+    ultrasonic ultrasound3(5);
     ```
+
+#### See the examples [here](https://github.com/ErickSimoes/Ultrasonic/tree/master/examples).
 
 License
 ----
