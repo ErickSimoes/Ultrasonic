@@ -7,7 +7,7 @@
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 23 Jan 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
- * modified 03 Mar 2017
+ * modified 04 Mar 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  *
  * Released into the MIT License.
@@ -15,9 +15,6 @@
 
 #include <Arduino.h>
 #include "Ultrasonic.h"
-
-#define CM_DIVISOR  28
-#define INC_DIVISOR 71
 
 Ultrasonic::Ultrasonic(uint8_t sigPin) {
   trig = sigPin;
@@ -58,8 +55,5 @@ unsigned int Ultrasonic::distanceRead() {
 }
 
 unsigned int Ultrasonic::distanceRead(uint8_t und) {
-  if (und)
-    return timing() / CM_DIVISOR / 2;  //distance in CM
-  else
-    return timing() / INC_DIVISOR / 2; //distance in INC
+  return timing() / und / 2;  //distance by divisor
 }

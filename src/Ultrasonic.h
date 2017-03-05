@@ -7,7 +7,7 @@
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 23 Jan 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
- * modified 01 Mar 2017
+ * modified 04 Mar 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  *
  * Released into the MIT License.
@@ -16,8 +16,11 @@
 #ifndef Ultrasonic_h
 #define Ultrasonic_h
 
-#define CM 1
-#define INC 0
+/*
+ * Values of divisors
+ */
+#define CM 28
+#define INC 71
 
 class Ultrasonic {
   public:
