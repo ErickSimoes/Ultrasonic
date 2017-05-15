@@ -9,6 +9,8 @@
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 04 Mar 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
+ * modified 15 May 2017
+ * by Eliot Lim    (github: @eliotlim)
  *
  * Released into the MIT License.
  */
@@ -16,17 +18,13 @@
 #include <Arduino.h>
 #include "Ultrasonic.h"
 
-Ultrasonic::Ultrasonic(uint8_t sigPin) {
-  trig = sigPin;
-  echo = sigPin;
-  threePins = true;
-}
-
-Ultrasonic::Ultrasonic(uint8_t trigPin, uint8_t echoPin) {
+Ultrasonic::Ultrasonic(uint8_t trigPin, uint8_t echoPin, unsigned long timeOut) {
   trig = trigPin;
   echo = echoPin;
+  threePins = trig == echo ? true : false;
   pinMode(trig, OUTPUT);
   pinMode(echo, INPUT);
+  timeout = timeOut;
 }
 
 unsigned int Ultrasonic::timing() {
@@ -42,7 +40,7 @@ unsigned int Ultrasonic::timing() {
   if (threePins)
     pinMode(trig, INPUT);
 
-  return pulseIn(echo, HIGH); // duration
+  return pulseIn(echo, HIGH, timeout); // duration
 }
 
 unsigned int Ultrasonic::distanceRead() {
