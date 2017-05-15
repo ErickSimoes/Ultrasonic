@@ -31,7 +31,7 @@ The idea is to provide a simpler environment possible. To do this, simply follow
     - In the search field type: ```ultrasonic```;
     - In the list, look for ```Ultrasonic by Erick Simões```;
     - Click on ```Install```.
-    
+
     Alternatively, you can download the library [here](https://github.com/ErickSimoes/Ultrasonic/archive/v1.0.1.zip) and import the ```.zip``` file into the IDE (see how to import a library [here](https://www.arduino.cc/en/Guide/Libraries#toc4)).
 2. **Importing on code**
 
@@ -70,6 +70,19 @@ The idea is to provide a simpler environment possible. To do this, simply follow
     ultrasonic ultrasound2(10, 11);
     ultrasonic ultrasound3(5);
     ```
+
+7. **Timeouts**
+
+    If there is no object in range, the library will lock-up as it waits for the return pulse.
+    You can change how long to wait by setting a timeout (in microseconds) in the constructor:
+    ```c++
+    Ultrasonic ultrasonic(12, 13, 40000UL);
+    ```
+    Or during runtime:
+    ```c++
+    ultrasonic.setTimeout(40000UL);
+    ```
+    Using a 40ms timeout should give you a maximum range of approximately 6.8m. You may need to adjust this parameter.
 
 #### See the examples [here](https://github.com/ErickSimoes/Ultrasonic/tree/master/examples).
 
