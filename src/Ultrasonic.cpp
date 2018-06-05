@@ -11,11 +11,18 @@
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 15 May 2017
  * by Eliot Lim    (github: @eliotlim)
+ * modified 05 Jun 2018
+ * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  *
  * Released into the MIT License.
  */
 
-#include <Arduino.h>
+#if ARDUINO >= 100
+  #include <Arduino.h>
+#else
+  #include <WProgram.h>
+#endif
+
 #include "Ultrasonic.h"
 
 Ultrasonic::Ultrasonic(uint8_t trigPin, uint8_t echoPin, unsigned long timeOut) {
