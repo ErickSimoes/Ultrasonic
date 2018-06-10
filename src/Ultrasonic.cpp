@@ -11,7 +11,7 @@
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 15 May 2017
  * by Eliot Lim    (github: @eliotlim)
- * modified 05 Jun 2018
+ * modified 10 Jun 2018
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  *
  * Released into the MIT License.
@@ -50,15 +50,31 @@ unsigned int Ultrasonic::timing() {
   return pulseIn(echo, HIGH, timeout); // duration
 }
 
-unsigned int Ultrasonic::distanceRead() {
-  /*
-   * If the unit of measure is not passed as a parameter,
-   * by default, it will return the distance in centimeters.
-   * To change the default, replace CM by INC.
-   */
-  return distanceRead(CM);
+/*
+ * If the unit of measure is not passed as a parameter,
+ * sby default, it will return the distance in centimeters.
+ * To change the default, replace CM by INC.
+ */
+unsigned int Ultrasonic::read() {
+  return read(CM);
 }
 
-unsigned int Ultrasonic::distanceRead(uint8_t und) {
+unsigned int Ultrasonic::read(uint8_t und) {
   return timing() / und / 2;  //distance by divisor
+}
+
+/*
+ * This method is too verbal, so, it's deprecated.
+ * Use read() instead.
+ */
+unsigned int Ultrasonic::distanceRead() {
+  return read(CM);
+}
+
+/*
+ * This method is too verbal, so, it's deprecated.
+ * Use read() instead.
+ */
+unsigned int Ultrasonic::distanceRead(uint8_t und) {
+  return read(und);
 }

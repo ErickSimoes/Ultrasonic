@@ -11,6 +11,8 @@
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 15 May 2017
  * by Eliot Lim    (github: @eliotlim)
+ * modified 10 Jun 2018
+ * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  *
  * Released into the MIT License.
  */
@@ -28,8 +30,10 @@ class Ultrasonic {
   public:
     Ultrasonic(uint8_t sigPin) : Ultrasonic(sigPin, sigPin) {};
     Ultrasonic(uint8_t trigPin, uint8_t echoPin, unsigned long timeOut = 20000UL);
-    unsigned int distanceRead();
-    unsigned int distanceRead(uint8_t und);
+    unsigned int read();
+    unsigned int read(uint8_t und);
+    unsigned int distanceRead() __attribute__ ((deprecated ("This method is deprecated, use read() instead.")));
+    unsigned int distanceRead(uint8_t und) __attribute__ ((deprecated ("This method is deprecated, use read() instead.")));
     void setTimeout(unsigned long timeOut) {timeout = timeOut;}
 
   private:
