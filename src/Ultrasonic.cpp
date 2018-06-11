@@ -55,20 +55,8 @@ unsigned int Ultrasonic::timing() {
  * sby default, it will return the distance in centimeters.
  * To change the default, replace CM by INC.
  */
-unsigned int Ultrasonic::read() {
-  return read(CM);
-}
-
 unsigned int Ultrasonic::read(uint8_t und) {
   return timing() / und / 2;  //distance by divisor
-}
-
-/*
- * This method is too verbal, so, it's deprecated.
- * Use read() instead.
- */
-unsigned int Ultrasonic::distanceRead() {
-  return read(CM);
 }
 
 /*
