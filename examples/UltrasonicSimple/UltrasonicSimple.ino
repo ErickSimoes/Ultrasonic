@@ -16,18 +16,20 @@
  * |   Echo  |   13    |    |   Gnd   |   GND   |
  * |   Gnd   |   GND   |    ---------------------
  * ---------------------
- * Note: You need not obligatorily use the pins defined above
+ * Note: You do not obligatorily need to use the pins defined above
  * 
- * By default, the distance returned by the distanceRead()
+ * By default, the distance returned by the read()
  * method is in centimeters, to get the distance in inches,
  * pass INC as a parameter.
- * Example: ultrasonic.distanceRead(INC)
+ * Example: ultrasonic.read(INC)
  *
  * created 3 Apr 2014
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 23 Jan 2017
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  * modified 03 Mar 2017
+ * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
+ * modified 11 Jun 2018
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
  *
  * This example code is released into the MIT License.
@@ -41,14 +43,17 @@
  * Ultrasonic ultrasonic(13);
  */
 Ultrasonic ultrasonic(12, 13);
+int distance;
 
 void setup() {
   Serial.begin(9600);
 }
 
 void loop() {
-  Serial.print("Distance in CM: ");
   // Pass INC as a parameter to get the distance in inches
-  Serial.println(ultrasonic.distanceRead());
+  distance = ultrasonic.read();
+  
+  Serial.print("Distance in CM: ");
+  Serial.println(distance);
   delay(1000);
 }
