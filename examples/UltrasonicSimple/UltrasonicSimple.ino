@@ -8,13 +8,13 @@
  * The circuit:
  * * Module HR-SC04 (four pins) or PING))) (and other with
  *   three pins), attached to digital pins as follows:
- * ---------------------    ---------------------
- * | HC-SC04 | Arduino |    | 3 pins  | Arduino |
- * ---------------------    ---------------------
- * |   Vcc   |   5V    |    |   Vcc   |   5V    |
- * |   Trig  |   12    | OR |   SIG   |   13    |
- * |   Echo  |   13    |    |   Gnd   |   GND   |
- * |   Gnd   |   GND   |    ---------------------
+ * ---------------------    --------------------
+ * | HC-SC04 | Arduino |    | 3 pins | Arduino |
+ * ---------------------    --------------------
+ * |   Vcc   |   5V    |    |   Vcc  |   5V    |
+ * |   Trig  |   12    | OR |   SIG  |   13    |
+ * |   Echo  |   13    |    |   Gnd  |   GND   |
+ * |   Gnd   |   GND   |    --------------------
  * ---------------------
  * Note: You do not obligatorily need to use the pins defined above
  * 

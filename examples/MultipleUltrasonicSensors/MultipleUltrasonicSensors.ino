@@ -9,13 +9,13 @@
  * * In this circuit there is an ultrasonic module HC-SC04,
  *   PING))) and a Seeed Studio (4 pins, 3 pins, 3 pins,
  *   respectively), attached to digital pins as follows:
- * ---------------------     ---------------------     ---------------------
- * | HC-SC04 | Arduino |     | PING))) | Arduino |     |  Seeed  | Arduino |
- * ---------------------     ---------------------     ---------------------
- * |   Vcc   |   5V    |     |   Vcc   |   5V    |     |   Vcc   |   5V    |
- * |   Trig  |   12    | AND |   SIG   |   10    | AND |   SIG   |    8    |
- * |   Echo  |   13    |     |   Gnd   |   GND   |     |   Gnd   |   GND   |
- * |   Gnd   |   GND   |     ---------------------     ---------------------
+ * ---------------------     ---------------------     -------------------
+ * | HC-SC04 | Arduino |     | PING))) | Arduino |     | Seeed | Arduino |
+ * ---------------------     ---------------------     -------------------
+ * |   Vcc   |   5V    |     |   Vcc   |   5V    |     |  Vcc  |   5V    |
+ * |   Trig  |   12    | AND |   SIG   |   10    | AND |  SIG  |    8    |
+ * |   Echo  |   13    |     |   Gnd   |   GND   |     |  Gnd  |   GND   |
+ * |   Gnd   |   GND   |     ---------------------     -------------------
  * ---------------------
  * Note: You do not obligatorily need to use the pins defined above
  * 
