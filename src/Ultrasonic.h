@@ -38,6 +38,7 @@ class Ultrasonic {
     uint8_t trig;
     uint8_t echo;
     boolean threePins = false;
+    unsigned long previousMicros;
     unsigned long timeout;
     unsigned int timing();
 };
