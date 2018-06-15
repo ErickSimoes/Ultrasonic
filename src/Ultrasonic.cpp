@@ -13,6 +13,8 @@
  * by Eliot Lim    (github: @eliotlim)
  * modified 10 Jun 2018
  * by Erick Simões (github: @ErickSimoes | twitter: @AloErickSimoes)
+ * modified 14 Jun 2018
+ * by Otacilio Maia (github: @OtacilioN | linkedIn: in/otacilio)
  *
  * Released into the MIT License.
  */
@@ -49,7 +51,7 @@ unsigned int Ultrasonic::timing() {
 
   while(!digitalRead(echo)); // wait for the echo pin HIGH
   previousMicros = micros();
-  while(digitalRead(echo)); // wait for the echo pin LOW
+  while(digitalRead(echo)  && (micros() - previousMicros) <= timeout); // wait for the echo pin LOW
 
   return micros() - previousMicros; // duration
 }
