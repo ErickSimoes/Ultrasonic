@@ -50,9 +50,9 @@ unsigned int Ultrasonic::timing() {
     pinMode(trig, INPUT);
   
   previousMicros = micros();
-  while(!digitalRead(echo) && (micros() - previousMicros) <= timeout); // wait for the echo pin HIGH
+  while(!digitalRead(echo) && (micros() - previousMicros) <= timeout); // wait for the echo pin HIGH or timeout
   previousMicros = micros();
-  while(digitalRead(echo)  && (micros() - previousMicros) <= timeout); // wait for the echo pin LOW
+  while(digitalRead(echo)  && (micros() - previousMicros) <= timeout); // wait for the echo pin LOW or timeout
 
   return micros() - previousMicros; // duration
 }
