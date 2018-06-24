@@ -3,7 +3,7 @@
  * Prints the distance read by an ultrasonic sensor in
  * centimeters. They are supported to four pins ultrasound
  * sensors (liek HC-SC04) and three pins (like PING)))
- * and Seeed Studio sesores).
+ * and Seeed Studio sensors).
  *
  * The circuit:
  * * Module HR-SC04 (four pins) or PING))) (and other with
@@ -19,7 +19,7 @@
  * Note: You do not obligatorily need to use the pins defined above
  * 
  * By default, the distance returned by the read()
- * method is in centimeters, to get the distance in inches,
+ * method is in centimeters. To get the distance in inches,
  * pass INC as a parameter.
  * Example: ultrasonic.read(INC)
  *
