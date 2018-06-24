@@ -18,7 +18,7 @@ It is very easy to connect an ultrasound module to the Arduino. For example, if 
 
 If you are using a module with three pins (like  **Ping)))** or **Seeed SEN136B5B**), you can conect the **sig** pin module on pin **13** of the Arduino.
 
-#### You can use the [Fritzing](http://fritzing.org/home/)(_.fzz_) files inside [extras](https://github.com/ErickSimoes/Ultrasonic/tree/master/extras) to draw your prototypes.
+> You can use the [Fritzing](http://fritzing.org/home/)(_.fzz_) files inside [extras](https://github.com/ErickSimoes/Ultrasonic/tree/master/extras) to draw your prototypes.
 
 How to use:
 ---------------
@@ -32,7 +32,7 @@ The idea is to provide a simpler environment possible. To do this, simply follow
     - In the list, look for ```Ultrasonic by Erick Simões```;
     - Click on ```Install```.
 
-    Alternatively, you can download the library [here](https://github.com/ErickSimoes/Ultrasonic/archive/master.zip) and import the ```.zip``` file into the IDE (see how to import a library [here](https://www.arduino.cc/en/Guide/Libraries#toc4)).
+    > Alternatively, you can download the library [here](https://github.com/ErickSimoes/Ultrasonic/archive/master.zip) and import the ```.zip``` file into the IDE (see how to import a library [here](https://www.arduino.cc/en/Guide/Libraries#toc4)).
 2. **Importing on code**
 
     To import the library to your code, just write at the beginning of the code ```#include <Ultrasonic.h>``` or, in the Arduino IDE, click in ```Sketch > Include Library > Ultrasonic``` (_will have the same result_).
