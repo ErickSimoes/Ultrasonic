@@ -9,12 +9,12 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-Ultrasonic		KEYWORD1
+Ultrasonic	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-read			KEYWORD2
+read	KEYWORD2
 distanceRead	KEYWORD2
 
 #######################################
