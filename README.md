@@ -57,15 +57,15 @@ The idea is to provide a simpler environment possible. To do this, simply follow
     ```
 5. **Only this?**
 
-    Yes. That's it. By default, the value returned from the function  ```read()``` is the distance in centimeters.
+    Yes. That's it. By default, the value returned from the function  ```distanceRead()``` is the distance in centimeters.
 
 6. **Seriously?**
 
     You can still do a little more determining the unit of measurement that will be returned (centimeters (CM) or inches (INC)).
     ```c++
-    ultrasonic.read()    // distance in CM
-    ultrasonic.read(CM)  // distance in CM
-    ultrasonic.read(INC) // distance in INC
+    ultrasonic.distanceRead()    // distance in CM
+    ultrasonic.distanceRead(CM)  // distance in CM
+    ultrasonic.distanceRead(INC) // distance in INC
     ```
     You can also use more than one ultrasound module:
     ```c++
