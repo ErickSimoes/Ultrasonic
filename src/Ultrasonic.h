@@ -33,6 +33,7 @@ class Ultrasonic {
     unsigned int read(uint8_t und = CM);
     unsigned int distanceRead(uint8_t und = CM) __attribute__ ((deprecated ("This method is deprecated, use read() instead.")));
     void setTimeout(unsigned long timeOut) {timeout = timeOut;}
+    void setMaxDistance(unsigned long dist) {timeout = dist*CM*2;}
 
   private:
     uint8_t trig;
