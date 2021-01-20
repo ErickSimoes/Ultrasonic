@@ -1,6 +1,7 @@
 [![Open Source badge](https://img.shields.io/badge/Open%20Source-❤-red.svg)](https://opensource.org/)
 [![GitHub](https://img.shields.io/github/license/ErickSimoes/Ultrasonic)](https://github.com/ErickSimoes/Ultrasonic/blob/master/LICENSE)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/ErickSimoes/Ultrasonic)](https://github.com/ErickSimoes/Ultrasonic/releases/latest)
+![Arduino Lint](https://github.com/ErickSimoes/Ultrasonic/workflows/Arduino%20Lint/badge.svg)
 
 Ultrasonic
 ===========
