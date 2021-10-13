@@ -18,10 +18,11 @@ This library is minimalist, reduces code execution, validation and unnecessary u
 
 Wiring:
 ---------------
-It is very easy to connect an ultrasound module to the Arduino. For example, if you are using **HC-SR04**, connect the **trigger** and **echo** pin module on pin **12** and **13** of the Arduino, respectively. As in the picture:
+It is very easy to connect an ultrasound module to the Arduino. For example, if you are using **HC-SR04**, connect the `trigger` and `echo` pin module on pin `12` and `13` of the Arduino, respectively. As in the picture:
+
 ![HC-SR04 with Arduino](extras/HC-SR04-with-Arduino.jpg?raw=true "HC-SR04 with Arduino")
 
-If you are using a module with three pins (like  **Ping)))** or **Seeed SEN136B5B**), you can conect the **sig** pin module on pin **13** of the Arduino.
+If you are using a module with three pins (like  **Ping)))** or **Seeed SEN136B5B**), you can conect the `sig` pin module on pin `13` of the Arduino.
 
 > You can use the [Fritzing](http://fritzing.org/home/)(_.fzz_) files inside [extras](https://github.com/ErickSimoes/Ultrasonic/tree/master/extras) to draw your prototypes.
 
@@ -55,15 +56,15 @@ The idea is to provide a simpler environment possible. To do this, simply follow
 
     Having initialized a variable, you can run hers from the method that returns the distance read by module Ultrasonic: ```read()```:
     ```c++
-    ultrasonic.read()
+    ultrasonic.read();
     ```
 5. **Only this?**
 
-    Yes. That's it. By default, the value returned from the function  ```read()``` is the distance in centimeters.
+    Yes. That's it. By default, the value returned from the function  ```read()``` is the distance in centimeters. See full sample code [here](/examples/UltrasonicSimple/UltrasonicSimple.ino).
 
 6. **Seriously?**
 
-    You can still do a little more determining the unit of measurement that will be returned (centimeters (CM) or inches (INC)).
+    You can still do a little more determining the unit of measurement that will be returned (centimeters (`CM`) or inches (`INC`)).
     ```c++
     ultrasonic.read()    // distance in CM
     ultrasonic.read(CM)  // distance in CM
@@ -71,15 +72,14 @@ The idea is to provide a simpler environment possible. To do this, simply follow
     ```
     You can also use more than one ultrasound module:
     ```c++
-    ultrasonic ultrasound1(12, 13);
-    ultrasonic ultrasound2(10, 11);
-    ultrasonic ultrasound3(5);
+    Ultrasonic ultrasound1(12, 13);
+    Ultrasonic ultrasound2(10, 11);
+    Ultrasonic ultrasound3(5);
     ```
 
 7. **Timeouts**
 
-    If there is no object in range, the library will lock-up as it waits for the return pulse.
-    You can change how long to wait by setting a timeout (in microseconds) in the constructor:
+    If there is no object in range, the library will lock-up as it waits for the return pulse. You can change how long to wait by setting a timeout (in microseconds) in the constructor:
     ```c++
     Ultrasonic ultrasonic(12, 13, 40000UL);
     ```
@@ -87,6 +87,8 @@ The idea is to provide a simpler environment possible. To do this, simply follow
     ```c++
     ultrasonic.setTimeout(40000UL);
     ```
+    > The default value is `20000UL` (_Unsigned Long_).
+    
     Using a 40ms timeout should give you a maximum range of approximately 6.8m. You may need to adjust this parameter.
 
 #### See the examples [here](https://github.com/ErickSimoes/Ultrasonic/tree/master/examples).
