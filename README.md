@@ -16,6 +16,12 @@ Where necessary use the ultrasonic module **HC-SR04** (one of the most common on
 
 This library is minimalist, reduces code execution, validation and unnecessary use of global variables, prioritizing smaller data types.
 
+You can run the library examples on the Wokwi Arduino simulator. Wokwi is a free Arduino simulator which runs on the browser. Here are two examples presenting the features of the Ultrasonic library
+
+Example 1 - [Ultrasonic distance measurement using 4 pin and 3 pin sensor versions ](https://wokwi.com/arduino/projects/296099969420493322)  
+
+Example 2 - [Reading distance in both centimeters and inches](https://wokwi.com/arduino/projects/312346565007114818)
+
 Wiring:
 ---------------
 It is very easy to connect an ultrasound module to the Arduino. For example, if you are using **HC-SR04**, connect the `trigger` and `echo` pin module on pin `12` and `13` of the Arduino, respectively. As in the picture:
