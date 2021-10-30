@@ -29,3 +29,58 @@ jobs:
           #verbose: true
           #official: false
           #token: ${{ github.token }}
+
+  compile:
+    strategy:
+      fail-fast: false
+
+      matrix:
+        boards: [arduino-uno, arduino-mega, arduino-leonardo]
+
+        include:
+          - boards: arduino-uno
+            arduino-platform: "arduino:avr"
+            fqbn: "arduino:avr:uno"
+            serial-enabled: true
+
+          - boards: arduino-mega
+            arduino-platform: "arduino:avr"
+            fqbn: "arduino:avr:mega"
+            serial-enabled: true
+
+          - boards: arduino-leonardo
+            arduino-platform: "arduino:avr"
+            fqbn: "arduino:avr:leonardo"
+            serial-enabled: true
+    
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Zip Ultrasonic.zip
+        uses: montudor/action-zip@v0.1.1
+        run: zip -qq -r ultrasonic.zip ./
+        working-directory: ${{ github.workspace }}
+
+      - name: Install Arduino CLI
+        uses: arduino/setup-arduino-cli@v1.1.1
+        with:
+          version: "0.19.x"
+
+      - name: Install Arduino Platform
+        run: |
+          arduino-cli core download ${{ matrix.arduino-platform }}
+          arduino-cli core update-index
+          arduino-cli core install ${{ matrix.arduino-platform }}
+      
+      #This is needed because we are using --zip-path to install a library
+      - name: Enables unsafe install 
+        run: |
+          arduino-cli config init 
+          arduino-cli config set library.enable_unsafe_install true
+
+      - name: Install Ultrasonic.h
+        run: arduino-cli lib install --zip-path ./ultrasonic.zip
+    
