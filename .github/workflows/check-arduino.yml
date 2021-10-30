@@ -63,7 +63,7 @@ jobs:
         uses: montudor/action-zip@v0.1.1
 
       - name: Zip Ultrasonic.zip
-        run: zip -qq -r ultrasonic.zip ./
+        run: zip -qq -r ultrasonic.zip ./src/
         working-directory: ${{ github.workspace }}
 
       - name: Install Arduino CLI
