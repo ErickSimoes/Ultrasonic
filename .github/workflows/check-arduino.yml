@@ -85,4 +85,13 @@ jobs:
 
       - name: Install Ultrasonic.h
         run: arduino-cli lib install --zip-path ./ultrasonic.zip
+
+      - name: Compile Sketch UltrasonicSimple.ino
+        run: arduino-cli compile --fqbn ${{ matrix.fqbn }} ./examples/UltrasonicSimple
+
+      - name: Compile Sketch Timeout.ino
+        run: arduino-cli compile --fqbn ${{ matrix.fqbn }} ./examples/Timeout
+
+      - name: Compile Sketch MultipleUltrasonicSensors.ino
+        run: arduino-cli compile --fqbn ${{ matrix.fqbn }} ./examples/MultipleUltrasonicSensors
     
