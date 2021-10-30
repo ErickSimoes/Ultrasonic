@@ -3,6 +3,8 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/ErickSimoes/Ultrasonic)](https://github.com/ErickSimoes/Ultrasonic/releases/latest)
 ![Arduino Lint](https://github.com/ErickSimoes/Ultrasonic/workflows/Arduino%20Lint/badge.svg)
 
+🇬🇧 **English** | 🇧🇷 [Português](./README_pt-br.md)
+
 Ultrasonic
 ===========
 
