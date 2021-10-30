@@ -59,8 +59,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Zip Ultrasonic.zip
+      - name: Install Zip
         uses: montudor/action-zip@v0.1.1
+
+      - name: Zip Ultrasonic.zip
         run: zip -qq -r ultrasonic.zip ./
         working-directory: ${{ github.workspace }}
 
