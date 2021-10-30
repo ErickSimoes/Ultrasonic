@@ -1,14 +1,15 @@
-name: Arduino Lint
+name: Check Arduino
 
 on:
   push:
     branches: [ master, test ]
-  pull_request:
+  pull_request: 
     branches: [ master, test ]
 
   workflow_dispatch:
 
 jobs:
+
   lint:
     runs-on: ubuntu-latest
     
